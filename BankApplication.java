@@ -65,6 +65,7 @@ public class BankApplication {
 					double deposit = keyboard.nextDouble();
 					while(deposit <= 0) {
 						System.out.print("ERROR. Deposit ammount must be greater than $0\nEnter deposit ammount: $");
+						deposit = keyboard.nextDouble();
 					}
 					account.depositCash(deposit);
 					System.out.printf("New balance is $" + "%.2f", account.getAcctBalance());
